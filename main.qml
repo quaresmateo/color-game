@@ -1,21 +1,30 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
+import QtQuick.Layouts 1.12
 
 Window {
     visible: true
     width: 640
     height: 480
-    title: qsTr("Hello World")
+    title: qsTr("Color Game")
 
-    Rectangle{
-        color: "red"
-        height: 100
-        radius: 100
-        width: 100
-        Text {
-            id: name
-            text: qsTr("Olá")
-            horizontalAlignment: Text.AlignVCenter
+    RowLayout {
+            anchors.fill: parent
+            spacing: 20
+                Rectangle{
+                    id: ret1
+                    color: "red"
+                    height: 100
+                    radius: 100
+                    width: 100
+                }
+
+                Rectangle{
+                    id: ret
+                    color: "cyan"
+                    height: 100
+                    radius: 100
+                    width: 100
+                }
         }
-    }
 }
