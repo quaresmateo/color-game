@@ -8,8 +8,6 @@ Window {
     height: 480
     title: qsTr("Color Game")
 
-
-
     RowLayout {
             anchors.fill: parent
             spacing: 20
