@@ -42,6 +42,11 @@ Window {
 
         signal clicked()
 
+        SoundEffect {
+            id: playSound
+            source: "soundeffect.wav"
+        }
+
         Rectangle{
             id: ret
             color: "#cdd220"
@@ -59,6 +64,7 @@ Window {
                 onPressed: {
                     ret.color = rowLayout.colorRetClaro
                     rowLayout.clicked()
+                    playSound.play()
                 }
                 onReleased: {
                     ret.color = rowLayout.colorRetEscuro
@@ -90,6 +96,7 @@ Window {
                         onPressed: {
                             ret2.color = rowLayout.colorRet2Claro
                             rowLayout.clicked()
+                            playSound.play()
                         }
 
                         onReleased: {
@@ -123,6 +130,7 @@ Window {
                         onPressed: {
                             ret3.color = rowLayout.colorRet3Claro
                             rowLayout.clicked()
+                            playSound.play()
                         }
 
                         onReleased: {
