@@ -42,14 +42,16 @@ Window {
 
         signal clicked()
 
+        SoundEffect {
+            id: playSound
+        }
+
         Rectangle{
             id: ret
             color: "#cdd220"
             height: 100
             radius: 100
             width: 100
-
-
 
             MouseArea{
                 id: area1
@@ -59,6 +61,8 @@ Window {
                 onPressed: {
                     ret.color = rowLayout.colorRetClaro
                     rowLayout.clicked()
+                    playSound.source = "soundeffect.wav"
+                    playSound.play()
                 }
                 onReleased: {
                     ret.color = rowLayout.colorRetEscuro
@@ -69,80 +73,80 @@ Window {
                 }
 
                 onExited: {
-                     ret.color = rowLayout.colorRetEscuro
+                    ret.color = rowLayout.colorRetEscuro
                 }
 
             }
         }
 
-                Rectangle{
-                    id: ret2
-                    color: "#0a3f7c"
-                    height: 100
-                    radius: 100
-                    width: 100
+        Rectangle{
+            id: ret2
+            color: "#0a3f7c"
+            height: 100
+            radius: 100
+            width: 100
 
-                    MouseArea{
-                        id: area2
-                        anchors.fill: parent
-                        hoverEnabled: true
+            MouseArea{
+                id: area2
+                anchors.fill: parent
+                hoverEnabled: true
 
-                        onPressed: {
-                            ret2.color = rowLayout.colorRet2Claro
-                            rowLayout.clicked()
-                        }
-
-                        onReleased: {
-                            ret2.color = rowLayout.colorRet2Escuro
-                        }
-
-                        onEntered: {
-                            ret2.color = rowLayout.colorRet2Claro
-                        }
-
-                        onExited: {
-                             ret2.color = rowLayout.colorRet2Escuro
-                        }
-
-                    }
+                onPressed: {
+                    ret2.color = rowLayout.colorRet2Claro
+                    rowLayout.clicked()
+                    playSound.source = "soundeffect2.wav"
+                    playSound.play()
                 }
 
-                Rectangle{
-                    id: ret3
-                    color: "#8f2228"
-
-                    height: 100
-                    radius: 100
-                    width: 100
-
-                    MouseArea{
-                        id: area3
-                        anchors.fill: parent
-                        hoverEnabled: true
-
-                        onPressed: {
-                            ret3.color = rowLayout.colorRet3Claro
-                            rowLayout.clicked()
-                        }
-
-                        onReleased: {
-                            ret3.color = rowLayout.colorRet3Escuro
-                        }
-
-                        onEntered: {
-                            ret3.color = rowLayout.colorRet3Claro
-                        }
-
-                        onExited: {
-                             ret3.color = rowLayout.colorRet3Escuro
-                        }
-
-                    }
+                onReleased: {
+                    ret2.color = rowLayout.colorRet2Escuro
                 }
 
+                onEntered: {
+                    ret2.color = rowLayout.colorRet2Claro
+                }
 
+                onExited: {
+                    ret2.color = rowLayout.colorRet2Escuro
+                }
 
+            }
+        }
 
+        Rectangle{
+            id: ret3
+            color: "#8f2228"
+
+            height: 100
+            radius: 100
+            width: 100
+
+            MouseArea{
+                id: area3
+                anchors.fill: parent
+                hoverEnabled: true
+
+                onPressed: {
+                    ret3.color = rowLayout.colorRet3Claro
+                    rowLayout.clicked()
+                    playSound.source = "soundeffect3.wav"
+                    playSound.play()
+                }
+
+                onReleased: {
+                    ret3.color = rowLayout.colorRet3Escuro
+                }
+
+                onEntered: {
+                    ret3.color = rowLayout.colorRet3Claro
+                }
+
+                onExited: {
+                    ret3.color = rowLayout.colorRet3Escuro
+                }
+
+            }
+        }
     }
 }
 
