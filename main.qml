@@ -44,7 +44,6 @@ Window {
 
         SoundEffect {
             id: playSound
-            source: "soundeffect.wav"
         }
 
         Rectangle{
@@ -62,6 +61,7 @@ Window {
                 onPressed: {
                     ret.color = rowLayout.colorRetClaro
                     rowLayout.clicked()
+                    playSound.source = "soundeffect.wav"
                     playSound.play()
                 }
                 onReleased: {
@@ -94,6 +94,7 @@ Window {
                 onPressed: {
                     ret2.color = rowLayout.colorRet2Claro
                     rowLayout.clicked()
+                    playSound.source = "soundeffect2.wav"
                     playSound.play()
                 }
 
@@ -128,6 +129,7 @@ Window {
                 onPressed: {
                     ret3.color = rowLayout.colorRet3Claro
                     rowLayout.clicked()
+                    playSound.source = "soundeffect3.wav"
                     playSound.play()
                 }
 
