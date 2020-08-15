@@ -56,7 +56,7 @@ Window {
             MouseArea{
                 id: area1
                 anchors.fill: parent
-                hoverEnabled: true
+                hoverEnabled: false
 
                 onPressed: {
                     ret.color = rowLayout.colorRetClaro
@@ -89,7 +89,7 @@ Window {
             MouseArea{
                 id: area2
                 anchors.fill: parent
-                hoverEnabled: true
+                hoverEnabled: false
 
                 onPressed: {
                     ret2.color = rowLayout.colorRet2Claro
@@ -124,7 +124,7 @@ Window {
             MouseArea{
                 id: area3
                 anchors.fill: parent
-                hoverEnabled: true
+                hoverEnabled: false
 
                 onPressed: {
                     ret3.color = rowLayout.colorRet3Claro
